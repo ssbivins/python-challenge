@@ -15,15 +15,9 @@ with open(csvpath) as csvfile:
     # Declare counters and placeholder variables
     # Total number of votes cast
     totalVotes = 0
-    # Dictionary with candidate : vote counts
+    # Dictionary with candidate : vote counts 
     canVotes = {}
-    canVotes = {}
-    print(canVotes)
-    canVotes["John"] = 0
-    print(canVotes)
-    canVotes["John"] += 1
-    print(canVotes)
-    #canVotes = {"candidate":,"voteCount":}
+    
 
     # Read each row in the csvreader file
     for row in csvreader:
@@ -33,5 +27,5 @@ with open(csvpath) as csvfile:
         if cand not in canVotes:
             canVotes[cand] = 0
         # Add 1 to  the name's counter
-        canVotes[candidate] += 1
+        canVotes[cand] += 1
     print(canVotes)
