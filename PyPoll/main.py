@@ -16,7 +16,14 @@ with open(csvpath) as csvfile:
     # Total number of votes cast
     totalVotes = 0
     # Dictionary with candidate : vote counts
-    canVotes = dict(candidate,votes)
+    canVotes = {}
+    canVotes = {}
+    print(canVotes)
+    canVotes["John"] = 0
+    print(canVotes)
+    canVotes["John"] += 1
+    print(canVotes)
+    #canVotes = {"candidate":,"voteCount":}
 
     # Read each row in the csvreader file
     for row in csvreader:
