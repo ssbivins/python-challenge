@@ -82,6 +82,9 @@ with open(csvpath) as csvfile:
     f.write("-------------------- \n")
     f.write(f'Total Months: {monthCount} \n')
     f.write(f'Total: ${total} \n')
+    f.write(f'Average Change: ${averageChange} \n')
+    f.write(f'Greatest Increase in Profits: {increaseMonth} ${increaseSoFar} \n')
+    f.write(f'Greatest Decrease in Profits: {decreaseMonth} ${decreaseSoFar} \n')
     f.close()
 
 
