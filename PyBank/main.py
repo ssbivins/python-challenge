@@ -74,10 +74,10 @@ with open(csvpath) as csvfile:
     
     # Write results to file
     # Establish the path to the file output.txt
-    outpath = os.path.join('..', 'Analysis', 'output.txt')
+    outpath = os.path.join('..','Analysis', 'output.txt')
 
     # Open the file
-    f = open("output.txt","w")
+    f = open(outpath,"w")
     f.write("Financial Analysis \n")
     f.write("-------------------- \n")
     f.write(f'Total Months: {monthCount} \n')
