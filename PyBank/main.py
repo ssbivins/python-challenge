@@ -68,13 +68,10 @@ with open(csvpath) as csvfile:
     print(f'Average Change: ${averageChange}')
     print(f'Greatest Increase in Profits: {increaseMonth} ${increaseSoFar}')
     print(f'Greatest Decrease in Profits: {decreaseMonth} ${decreaseSoFar}')
-
-
-
-    
+   
     # Write results to file
     # Establish the path to the file output.txt
-    outpath = os.path.join('..','Analysis', 'output.txt')
+    outpath = os.path.join('.','Analysis', 'output.txt')
 
     # Open the file
     f = open(outpath,"w")
