@@ -84,6 +84,6 @@ with open(csvpath) as csvfile:
         # Get the highest number of votes to determine winner
 
     f.write('-------------------- \n')
-    f.write('Winner: {winnerSoFar} \n')
+    f.write(f'Winner: {winnerSoFar} \n')
     f.write('-------------------- \n')   
     f.close()
