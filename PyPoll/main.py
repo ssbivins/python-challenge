@@ -37,7 +37,6 @@ with open(csvpath) as csvfile:
         canVotes[cand] += 1
         # Add 1 to total votes
         totalVotes += 1
-    print(canVotes)
 
     # Print out results 
     print("Election Results")
@@ -62,3 +61,15 @@ with open(csvpath) as csvfile:
     print(f'Winner: {winnerSoFar}')
     print("--------------------")   
 
+        # Write results to file
+    # Establish the path to the file output.txt
+    outpath = os.path.join('.','Analysis', 'output.txt')
+
+    # Open the file
+    f = open(outpath,"w")
+    f.write("Election Results \n")
+    f.write("-------------------- \n")
+    f.write(f'Total Votes: {totalVotes} \n')
+    f.write("-------------------- \n")
+    
+    f.close()
