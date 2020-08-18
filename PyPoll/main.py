@@ -75,7 +75,7 @@ with open(csvpath) as csvfile:
     # Go through dictionary canVotes to get and write to file the results for each candidate 
     # For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
     # If I had more time, I would create a function to go through dictionary canVotes and return an array of strings for each candidate
-    # Then the array of strings could be printed on console and/or put in text file, only reading the csv file 
+    # Then the array of strings could be printed on console and/or put in text file rather than going through dictionary twice 
     
     for c in canVotes:
         name = c
