@@ -50,10 +50,10 @@ with open(csvpath) as csvfile:
     for c in canVotes:
         name = c
         votes = canVotes[c]
-        calcPercentVotes = (votes/totalVotes*100)
-        percentVotes = calcPercentVotes(round,3) 
+        percentVotes = (votes/totalVotes*100) 
+        formatted_percentVotes = "{:.3f}".format(percentVotes)
         # Print candidate information
-        print(f'{name}: {percentVotes}% {votes}')
+        print(f'{name}: {formatted_percentVotes}% {votes}')
         # Get the highest number of votes to determine winner
         if (votes > votesSoFar):
             votesSoFar = votes
