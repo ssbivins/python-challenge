@@ -45,7 +45,7 @@ with open(csvpath) as csvfile:
     print("--------------------")
     
     # Go through dictionary canVotes to get and print results for each candidate 
-    #for k,v in canVotes:
+    #f For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
     for c in canVotes:
         name = c
         votes = canVotes[c]
@@ -71,5 +71,19 @@ with open(csvpath) as csvfile:
     f.write("-------------------- \n")
     f.write(f'Total Votes: {totalVotes} \n')
     f.write("-------------------- \n")
-    
+    # Go through dictionary canVotes to get and write to file the results for each candidate
+    # Wish I had known how to save the formatted stuff printed out above to avoid looping again 
+    # For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
+    for c in canVotes:
+        name = c
+        votes = canVotes[c]
+        percentVotes = (votes/totalVotes*100) 
+        formatted_percentVotes = "{:.3f}".format(percentVotes)
+        # Print candidate information
+        f.write(f'{name}: {formatted_percentVotes}% {votes} \n')
+        # Get the highest number of votes to determine winner
+
+    f.write('-------------------- \n')
+    f.write('Winner: {winnerSoFar} \n')
+    f.write('-------------------- \n')   
     f.close()
