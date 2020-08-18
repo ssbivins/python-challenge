@@ -71,9 +71,12 @@ with open(csvpath) as csvfile:
     f.write("-------------------- \n")
     f.write(f'Total Votes: {totalVotes} \n')
     f.write("-------------------- \n")
-    # Go through dictionary canVotes to get and write to file the results for each candidate
-    # Wish I had known how to save the formatted stuff printed out above to avoid looping again 
+    
+    # Go through dictionary canVotes to get and write to file the results for each candidate 
     # For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
+    # If I had more time, I would create a function to go through dictionary canVotes and return an array of strings for each candidate
+    # Then the array of strings could be printed on console and/or put in text file, only reading the csv file 
+    
     for c in canVotes:
         name = c
         votes = canVotes[c]
