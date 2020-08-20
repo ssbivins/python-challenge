@@ -13,6 +13,4 @@ When running PyPoll, the directory folder should be open to the PyPoll folder be
 
 For both programs, the results will be displayed in the terminal window, as well as in the file "output.txt".
 
-If more time is available, I would use a function in PyPoll to create an array of strings
-from the dictionary of candidate data, so they would only be built once and 
-could be used for both the print and the text file.
+With more time, this code could be written more efficiently.
