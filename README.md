@@ -12,5 +12,3 @@ When running PyBank, the directory folder should be open to the PyBank folder be
 When running PyPoll, the directory folder should be open to the PyPoll folder because the file "output.txt" will be placed in the folder PyPoll\Analysis, which is found in the PyPoll folder (relatively one level up).
 
 For both programs, the results will be displayed in the terminal window, as well as in the file "output.txt".
-
-With more time, this code could be written more efficiently.
