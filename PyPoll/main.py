@@ -38,54 +38,48 @@ with open(csvpath) as csvfile:
         # Add 1 to total votes
         totalVotes += 1
 
-    # Print out results 
+    # Print out results on console and write them to console and file
+    # Console
+    # Print a blank line first (to distinguish the Election results from whatever is above)
+    print(" ")
     print("Election Results")
     print("--------------------")
     print(f'Total Votes: {totalVotes}')
     print("--------------------")
+   
     
-    # Go through dictionary canVotes to get and print results for each candidate 
-    #f For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
-    for c in canVotes:
-        name = c
-        votes = canVotes[c]
-        percentVotes = (votes/totalVotes*100) 
-        formatted_percentVotes = "{:.3f}".format(percentVotes)
-        # Print candidate information
-        print(f'{name}: {formatted_percentVotes}% {votes}')
-        # Get the highest number of votes to determine winner
-        if (votes > votesSoFar):
-            votesSoFar = votes
-            winnerSoFar = name
-    print("--------------------")
-    print(f'Winner: {winnerSoFar}')
-    print("--------------------")   
-
-        # Write results to file
     # Establish the path to the file output.txt
     outpath = os.path.join('.','Analysis', 'output.txt')
-
-    # Open the file
+    # Open the file and write initial content
     f = open(outpath,"w")
     f.write("Election Results \n")
     f.write("-------------------- \n")
     f.write(f'Total Votes: {totalVotes} \n')
     f.write("-------------------- \n")
     
-    # Go through dictionary canVotes to get and write to file the results for each candidate 
-    # For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
-    # If I had more time, I would create a function to go through dictionary canVotes and return an array of strings for each candidate
-    # Then the array of strings could be printed on console and/or put in text file rather than going through dictionary twice 
-    
+    # Go through dictionary canVotes to get and print results for each candidate and also write them to file 
+    #f For c in canVotes (c is the name, canVotes[c] gets the value, in this case number of votes):
     for c in canVotes:
         name = c
         votes = canVotes[c]
         percentVotes = (votes/totalVotes*100) 
         formatted_percentVotes = "{:.3f}".format(percentVotes)
-        # Print candidate information
+        # Print candidate information and also write it to file
+        print(f'{name}: {formatted_percentVotes}% {votes}')
+        # Write candidate information to file
         f.write(f'{name}: {formatted_percentVotes}% {votes} \n')
+        
         # Get the highest number of votes to determine winner
-
+        if (votes > votesSoFar):
+            votesSoFar = votes
+            winnerSoFar = name
+   
+    # Print winner information
+    print("--------------------")
+    print(f'Winner: {winnerSoFar}')
+    print("--------------------")   
+    
+    # Write winner information to file and close it
     f.write('-------------------- \n')
     f.write(f'Winner: {winnerSoFar} \n')
     f.write('-------------------- \n')   
